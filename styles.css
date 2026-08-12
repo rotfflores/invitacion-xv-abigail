@@ -112,9 +112,9 @@ body {
 }
 .hero-floral-back-bottom-right {
   z-index: 0;
-  right: -9%;
+  right: -13%;
   bottom: 4%;
-  width: 29%;
+  width: 42%;
 }
 .hero-floral-front-bottom-right {
   z-index: 3;
@@ -176,31 +176,30 @@ body {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 48px;
+  width: 64px;
+  height: 54px;
   border: 0;
   font-size: 22px;
   color: var(--rose);
 }
 .date-row strong img {
-  position: absolute;
+  position: relative;
   z-index: 0;
-  left: 50%;
-  top: 50%;
+  grid-area: 1 / 1;
   width: 62px;
   height: 50px;
   object-fit: contain;
-  transform: translate(-50%, -50%);
   pointer-events: none;
 }
 .date-row strong b {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  left: 50%;
-  top: 50%;
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
   font: inherit;
   line-height: 1;
-  transform: translate(-50%, -50%);
+  transform: none;
 }
 .year { color: var(--gold); letter-spacing: .35em; margin: 14px 0 0; padding-left: .35em; }
 .bottom-tiara {
@@ -242,9 +241,9 @@ body {
   }
 
   .hero-floral-back-bottom-right {
-    right: -8%;
+    right: -12%;
     bottom: 4%;
-    width: 30%;
+    width: 44%;
   }
 
   .hero-floral-front-bottom-right {
