@@ -14,10 +14,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 20% 10%, rgba(255,255,255,.7), transparent 28%),
-    repeating-linear-gradient(92deg, rgba(255,255,255,.14) 0 1px, transparent 1px 5px),
-    #e7ccca;
+  background: #f9e9e9;
   font-family: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -25,8 +22,8 @@ body {
   width: min(100%, 500px);
   margin: 0 auto;
   overflow: hidden;
-  background: var(--paper);
-  box-shadow: 0 0 45px rgba(76, 43, 43, .17);
+  background: transparent;
+  box-shadow: none;
 }
 
 .panel, .story, .countdown-section, .details, footer { position: relative; }
@@ -57,14 +54,11 @@ body {
 .botanical-frame {
   position: absolute;
   z-index: 0;
-  top: 14.2%;
-  right: 16.8%;
-  bottom: 5.9%;
-  left: 16.8%;
-  border: 1px solid rgba(188, 125, 126, .58);
-  border-radius: 34px 34px 48px 48px;
+  inset: 0;
+  border: 0;
+  border-radius: 0;
   background: rgba(255, 254, 254, .98);
-  box-shadow: 0 1px 3px rgba(112, 70, 70, .05);
+  box-shadow: none;
 }
 .eyebrow { margin: 0; color: var(--rose); text-transform: uppercase; letter-spacing: .08em; font-size: 31px; transform: rotate(-8deg); }
 .tiny-crown { margin-top: -49px; margin-left: 22px; color: rgba(191,160,92,.38); font-size: 86px; }
