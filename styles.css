@@ -111,9 +111,9 @@ body {
 }
 .hero-floral-back-bottom-right {
   z-index: 0;
-  right: -15%;
-  bottom: 0;
-  width: 36%;
+  right: -18%;
+  bottom: 10%;
+  width: 43%;
 }
 .hero-floral-front-bottom-right {
   z-index: 3;
@@ -179,13 +179,21 @@ body {
   font-size: 22px;
   color: var(--rose);
 }
-.date-row strong::before {
-  content: "♡";
+.date-row strong img {
   position: absolute;
-  inset: 57% auto auto 50%;
-  color: var(--gold);
-  font: 400 61px/1 Georgia, serif;
+  z-index: 0;
+  left: 50%;
+  top: 54%;
+  width: 65px;
+  height: 52px;
+  object-fit: contain;
   transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.date-row strong b {
+  position: relative;
+  z-index: 1;
+  font: inherit;
 }
 .year { color: var(--gold); letter-spacing: .35em; margin: 14px 0 0; padding-left: .35em; }
 .bottom-tiara {
@@ -227,9 +235,9 @@ body {
   }
 
   .hero-floral-back-bottom-right {
-    right: 0;
-    bottom: 0;
-    width: 29%;
+    right: -1%;
+    bottom: 11%;
+    width: 36%;
   }
 
   .hero-floral-front-bottom-right {
