@@ -3,6 +3,7 @@ from PIL import Image, ImageFilter
 
 SOURCE = Path(r"C:\Users\Lenovo\Desktop\temporales\WhatsApp Image 2026-08-11 at 2.52.08 PM - copia.jpeg")
 OUTPUT = Path(__file__).resolve().parents[1] / "assets" / "florals"
+SCALE = 4
 
 # Recortes medidos sobre la referencia original de 381 × 492 px.
 CROPS = {
@@ -46,12 +47,27 @@ def remove_paper(image: Image.Image) -> Image.Image:
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     source = Image.open(SOURCE).convert("RGB")
+    # Supermuestreo para que los PNG mantengan nitidez en pantallas HD/Retina.
+    source = source.resize(
+        (source.width * SCALE, source.height * SCALE),
+        Image.Resampling.LANCZOS,
+    ).filter(ImageFilter.MedianFilter(3))
     for name, box in CROPS.items():
-        result = remove_paper(source.crop(box))
+        hd_box = tuple(value * SCALE for value in box)
+        result = remove_paper(source.crop(hd_box))
         if name == "top-left":
             # El número dorado invade unos píxeles del recorte en el original.
             # Se elimina solo esa zona; el trazo floral queda intacto.
-            result.paste((0, 0, 0, 0), (136, 64, result.width, result.height))
+            result.paste(
+                (0, 0, 0, 0),
+                (136 * SCALE, 64 * SCALE, result.width, result.height),
+            )
+        # Realce moderado sobre RGB sin alterar la transparencia ni redibujar.
+        rgb = result.convert("RGB").filter(
+            ImageFilter.UnsharpMask(radius=1.2, percent=115, threshold=4)
+        )
+        rgb.putalpha(result.getchannel("A"))
+        result = rgb
         result.save(OUTPUT / f"{name}.png", optimize=True)
 
 
