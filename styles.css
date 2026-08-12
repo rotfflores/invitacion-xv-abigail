@@ -158,21 +158,22 @@ body {
 .date-row strong::before {
   content: "♡";
   position: absolute;
-  inset: 50% auto auto 50%;
+  inset: 57% auto auto 50%;
   color: var(--gold);
   font: 400 61px/1 Georgia, serif;
   transform: translate(-50%, -50%);
 }
 .year { color: var(--gold); letter-spacing: .35em; margin: 14px 0 0; padding-left: .35em; }
 .bottom-tiara {
-  position: absolute !important;
-  z-index: 2 !important;
-  left: 50%;
-  bottom: 13%;
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  display: block;
   width: 42%;
   height: auto;
+  max-height: 112px;
+  margin: 18px auto 0;
   object-fit: contain;
-  transform: translateX(-50%);
   pointer-events: none;
   user-select: none;
 }
