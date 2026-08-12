@@ -99,32 +99,45 @@ body {
 }
 .quince-heading {
   width: 74%;
-  height: 82px;
-  margin: -22px 0 -4px;
-  display: grid;
-  place-items: center;
+  height: 86px;
+  margin: -26px 0 0;
+}
+.quince-arc {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.quince-arc text {
+  fill: var(--rose);
+  font: 600 19px/1 "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  paint-order: stroke;
+  stroke: rgba(255,255,255,.8);
+  stroke-width: .5px;
 }
 .quince-number {
   position: absolute;
   z-index: 0;
-  top: -9px;
+  top: 32px;
+  left: 50%;
   color: rgba(190, 159, 91, .44);
-  font: 400 clamp(66px, 18vw, 88px)/1 "Italiana", serif;
+  font: 400 clamp(54px, 15vw, 74px)/1 "Italiana", serif;
   letter-spacing: -.12em;
+  transform: translateX(-50%);
 }
-.quince-title {
+.title-bow {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: block;
-  color: var(--rose);
-  font-size: clamp(19px, 5.2vw, 26px);
-  font-weight: 600;
-  letter-spacing: .035em;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transform: translateY(14px) rotate(-9deg);
-  text-shadow: 0 1px rgba(255,255,255,.85);
+  width: 52%;
+  height: 34px;
+  margin: -6px 0 3px;
+  object-fit: cover;
+  object-position: 50% 42%;
 }
 .hero > :not(.botanical-frame, .floral, .hero-floral) { position: relative; z-index: 2; }
 .hero h1 { width: 82%; margin: 6px 0 12px; color: var(--rose); font: 400 clamp(58px, 16.5vw, 82px)/.9 "Parisienne", cursive; overflow-wrap: anywhere; }
@@ -186,7 +199,7 @@ footer strong { color: var(--rose); font: 400 86px/1 "Parisienne", cursive; }
 .reveal { opacity: 1; transform: none; }
 
 @media (max-width: 380px) {
-  .quince-title { font-size: 19px; }
+  .quince-arc text { font-size: 18px; }
   .story { grid-template-columns: 120px 1fr; padding-left: 71px; }
   .photo-stack figure { width: 120px; height: 165px; }
   .story blockquote { font-size: 16px; padding-inline: 11px; }
