@@ -97,8 +97,35 @@ body {
   right: -1%;
   width: 52%;
 }
-.eyebrow { width: 74%; margin: 0; color: var(--rose); text-transform: uppercase; letter-spacing: .06em; font-size: clamp(20px, 5.4vw, 27px); transform: rotate(-8deg); }
-.tiny-crown { margin-top: -39px; margin-left: 22px; color: rgba(191,160,92,.38); font-size: clamp(58px, 17vw, 78px); }
+.quince-heading {
+  width: 74%;
+  height: 82px;
+  margin: -22px 0 -4px;
+  display: grid;
+  place-items: center;
+}
+.quince-number {
+  position: absolute;
+  z-index: 0;
+  top: -9px;
+  color: rgba(190, 159, 91, .44);
+  font: 400 clamp(66px, 18vw, 88px)/1 "Italiana", serif;
+  letter-spacing: -.12em;
+}
+.quince-title {
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: var(--rose);
+  font-size: clamp(19px, 5.2vw, 26px);
+  font-weight: 600;
+  letter-spacing: .035em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateY(14px) rotate(-9deg);
+  text-shadow: 0 1px rgba(255,255,255,.85);
+}
 .hero > :not(.botanical-frame, .floral, .hero-floral) { position: relative; z-index: 2; }
 .hero h1 { width: 82%; margin: 6px 0 12px; color: var(--rose); font: 400 clamp(58px, 16.5vw, 82px)/.9 "Parisienne", cursive; overflow-wrap: anywhere; }
 .lead { width: 72%; margin: 0; color: var(--gold); font-size: clamp(19px, 5.2vw, 26px); line-height: .9; }
@@ -159,7 +186,7 @@ footer strong { color: var(--rose); font: 400 86px/1 "Parisienne", cursive; }
 .reveal { opacity: 1; transform: none; }
 
 @media (max-width: 380px) {
-  .eyebrow { font-size: 20px; }
+  .quince-title { font-size: 19px; }
   .story { grid-template-columns: 120px 1fr; padding-left: 71px; }
   .photo-stack figure { width: 120px; height: 165px; }
   .story blockquote { font-size: 16px; padding-inline: 11px; }
