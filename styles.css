@@ -21,7 +21,7 @@ body {
 .invitation {
   width: min(100%, 500px);
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
   box-shadow: none;
 }
@@ -111,15 +111,15 @@ body {
 }
 .hero-floral-back-bottom-right {
   z-index: 0;
-  right: -4%;
-  bottom: -2%;
-  width: 31%;
+  right: -15%;
+  bottom: 0;
+  width: 36%;
 }
 .hero-floral-front-bottom-right {
   z-index: 3;
-  right: -5%;
-  bottom: -2%;
-  width: 43%;
+  right: -2%;
+  bottom: 1%;
+  width: 39%;
 }
 .quince-heading {
   width: 74%;
