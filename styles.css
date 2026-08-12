@@ -91,6 +91,12 @@ body {
   left: -3%;
   width: 36%;
 }
+.hero-floral-top-right {
+  z-index: 3;
+  top: -1%;
+  right: -1%;
+  width: 52%;
+}
 .eyebrow { width: 74%; margin: 0; color: var(--rose); text-transform: uppercase; letter-spacing: .06em; font-size: clamp(20px, 5.4vw, 27px); transform: rotate(-8deg); }
 .tiny-crown { margin-top: -39px; margin-left: 22px; color: rgba(191,160,92,.38); font-size: clamp(58px, 17vw, 78px); }
 .hero > :not(.botanical-frame, .floral, .hero-floral) { position: relative; z-index: 2; }
