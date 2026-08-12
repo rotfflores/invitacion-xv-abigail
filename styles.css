@@ -55,9 +55,9 @@ body {
   position: absolute;
   z-index: 0;
   top: 7.5%;
-  right: 2.5%;
+  right: 1%;
   bottom: 4.5%;
-  left: 2.5%;
+  left: 1%;
   border: 1px solid rgba(188, 125, 126, .42);
   border-radius: 34px;
   background: rgba(255, 254, 254, .98);
