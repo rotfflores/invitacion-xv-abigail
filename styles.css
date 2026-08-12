@@ -30,7 +30,7 @@ body {
 
 .hero {
   min-height: 0;
-  aspect-ratio: 381 / 555;
+  aspect-ratio: 381 / 620;
   padding: 0;
   text-align: center;
   display: flex;
@@ -149,10 +149,10 @@ body {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  width: 43px;
-  height: 39px;
+  width: 52px;
+  height: 48px;
   border: 0;
-  font-size: 21px;
+  font-size: 22px;
   color: var(--rose);
 }
 .date-row strong::before {
@@ -160,7 +160,7 @@ body {
   position: absolute;
   inset: 50% auto auto 50%;
   color: var(--gold);
-  font: 400 48px/1 Georgia, serif;
+  font: 400 61px/1 Georgia, serif;
   transform: translate(-50%, -50%);
 }
 .year { color: var(--gold); letter-spacing: .35em; margin: 14px 0 0; padding-left: .35em; }
@@ -168,14 +168,24 @@ body {
   position: absolute !important;
   z-index: 2 !important;
   left: 50%;
-  bottom: 18%;
+  bottom: 13%;
   width: 42%;
-  height: 72px;
-  object-fit: cover;
-  object-position: 50% 48%;
+  height: auto;
+  object-fit: contain;
   transform: translateX(-50%);
   pointer-events: none;
   user-select: none;
+}
+
+@media (min-width: 501px) {
+  .invitation,
+  .hero {
+    overflow: visible;
+  }
+
+  .hero-floral {
+    max-width: none;
+  }
 }
 
 .story { min-height: 800px; padding: 72px 27px 78px 82px; display: grid; grid-template-columns: 145px 1fr; align-items: center; gap: 16px; }
