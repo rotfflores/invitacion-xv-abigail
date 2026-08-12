@@ -213,6 +213,32 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .hero-floral-back-bottom-left {
+    left: 0;
+    bottom: 0;
+    width: 48%;
+  }
+
+  .hero-floral-front-bottom-left {
+    left: 0;
+    bottom: 1%;
+    width: 30%;
+  }
+
+  .hero-floral-back-bottom-right {
+    right: 0;
+    bottom: 0;
+    width: 29%;
+  }
+
+  .hero-floral-front-bottom-right {
+    right: 0;
+    bottom: 1%;
+    width: 36%;
+  }
+}
+
 .story { min-height: 800px; padding: 72px 27px 78px 82px; display: grid; grid-template-columns: 145px 1fr; align-items: center; gap: 16px; }
 .story::before { content: "♛"; position: absolute; top: 27px; left: 210px; color: rgba(217,105,109,.55); font-size: 84px; transform: rotate(-10deg); }
 .story::after { right: -5px; bottom: 58px; font-size: 36px; }
