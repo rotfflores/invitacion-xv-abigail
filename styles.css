@@ -54,11 +54,14 @@ body {
 .botanical-frame {
   position: absolute;
   z-index: 0;
-  inset: 0;
-  border: 0;
-  border-radius: 0;
+  top: 7.5%;
+  right: 4.5%;
+  bottom: 4.5%;
+  left: 4.5%;
+  border: 1px solid rgba(188, 125, 126, .42);
+  border-radius: 34px;
   background: rgba(255, 254, 254, .98);
-  box-shadow: none;
+  box-shadow: 0 2px 5px rgba(112, 70, 70, .04);
 }
 .eyebrow { margin: 0; color: var(--rose); text-transform: uppercase; letter-spacing: .08em; font-size: 31px; transform: rotate(-8deg); }
 .tiny-crown { margin-top: -49px; margin-left: 22px; color: rgba(191,160,92,.38); font-size: 86px; }
