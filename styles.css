@@ -109,6 +109,18 @@ body {
   left: -5%;
   width: 34%;
 }
+.hero-floral-back-bottom-right {
+  z-index: 0;
+  right: -4%;
+  bottom: -2%;
+  width: 31%;
+}
+.hero-floral-front-bottom-right {
+  z-index: 3;
+  right: -5%;
+  bottom: -2%;
+  width: 43%;
+}
 .quince-heading {
   width: 74%;
   height: 86px;
