@@ -187,8 +187,8 @@ body {
   z-index: 0;
   left: 50%;
   top: 50%;
-  width: 65px;
-  height: 52px;
+  width: 62px;
+  height: 50px;
   object-fit: contain;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -197,7 +197,7 @@ body {
   position: relative;
   z-index: 1;
   font: inherit;
-  transform: translateY(1px);
+  transform: translate(-1px, 5px);
 }
 .year { color: var(--gold); letter-spacing: .35em; margin: 14px 0 0; padding-left: .35em; }
 .bottom-tiara {
@@ -239,9 +239,9 @@ body {
   }
 
   .hero-floral-back-bottom-right {
-    right: -7%;
-    bottom: 9%;
-    width: 52%;
+    right: -10%;
+    bottom: 28%;
+    width: 42%;
   }
 
   .hero-floral-front-bottom-right {
