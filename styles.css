@@ -231,6 +231,11 @@ body {
 }
 
 @media (max-width: 500px) {
+  .botanical-frame {
+    left: 8%;
+    right: 4%;
+  }
+
   .hero-floral-back {
     left: 1.5%;
     width: 56%;
@@ -260,15 +265,15 @@ body {
   }
 
   .hero-floral-back-bottom-right {
-    right: -4%;
-    bottom: 4%;
-    width: 43%;
+    right: 0;
+    bottom: 0;
+    width: 36%;
   }
 
   .hero-floral-front-bottom-right {
-    right: 0;
-    bottom: 1%;
-    width: 39%;
+    right: 1%;
+    bottom: 0;
+    width: 36%;
   }
 }
 
