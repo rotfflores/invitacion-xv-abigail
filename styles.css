@@ -112,7 +112,7 @@ body {
 }
 .hero-floral-back-bottom-right {
   z-index: 0;
-  right: -3%;
+  right: -9%;
   bottom: 4%;
   width: 29%;
 }
@@ -242,7 +242,7 @@ body {
   }
 
   .hero-floral-back-bottom-right {
-    right: -2%;
+    right: -8%;
     bottom: 4%;
     width: 30%;
   }
