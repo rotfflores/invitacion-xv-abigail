@@ -144,13 +144,31 @@ body {
 .hero h1 { width: 82%; margin: 6px 0 12px; color: var(--rose); font: 400 clamp(58px, 16.5vw, 82px)/.9 "Parisienne", cursive; overflow-wrap: anywhere; }
 .lead { width: 72%; margin: 0; color: var(--gold); font-size: clamp(19px, 5.2vw, 26px); line-height: .9; }
 .date-row { width: 76%; margin-top: 24px; display: flex; align-items: center; justify-content: center; gap: 7px; color: var(--rose-dark); text-transform: uppercase; font-size: clamp(12px, 3.4vw, 17px); font-weight: 600; letter-spacing: .02em; white-space: nowrap; }
-.date-row strong { flex: 0 0 auto; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--gold); border-radius: 50%; font-size: 23px; color: var(--rose); }
+.date-row strong {
+  position: relative;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 39px;
+  border: 0;
+  font-size: 21px;
+  color: var(--rose);
+}
+.date-row strong::before {
+  content: "♡";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  color: var(--gold);
+  font: 400 48px/1 Georgia, serif;
+  transform: translate(-50%, -50%);
+}
 .year { color: var(--gold); letter-spacing: .35em; margin: 14px 0 0; padding-left: .35em; }
 .bottom-tiara {
   position: absolute !important;
   z-index: 2 !important;
   left: 50%;
-  bottom: 10%;
+  bottom: 18%;
   width: 42%;
   height: 72px;
   object-fit: cover;
