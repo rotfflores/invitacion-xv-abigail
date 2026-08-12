@@ -292,8 +292,8 @@ body {
 }
 
 .story-panel {
-  width: calc(100% - 56px);
-  margin: 54px auto 70px;
+  width: auto;
+  margin: 54px 3.5% 70px 11%;
   padding: 0 0 28px;
   overflow: hidden;
   background: rgba(255, 246, 246, .42);
