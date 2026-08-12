@@ -32,20 +32,19 @@ body {
 .panel, .story, .countdown-section, .details, footer { position: relative; }
 
 .hero {
-  min-height: 770px;
-  padding: 118px 34px 75px;
+  min-height: 0;
+  aspect-ratio: 381 / 492;
+  padding: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(90deg, var(--rose) 1px, transparent 1px) 25px 48px / calc(100% - 50px) calc(100% - 96px) no-repeat,
-    linear-gradient(var(--rose) 1px, transparent 1px) 25px 48px / calc(100% - 50px) calc(100% - 96px) no-repeat,
-    radial-gradient(circle at 50% 22%, #fff 0 36%, transparent 70%);
+  overflow: hidden;
+  background: #f9e9e9;
 }
 
-.hero::before, .hero::after, .details::before, .story::after {
+.details::before, .story::after {
   content: "❧ 𓆸 ❀ 𓆰 ❧";
   position: absolute;
   color: rgba(214, 102, 108, .56);
@@ -54,13 +53,23 @@ body {
   transform: rotate(-15deg);
 }
 
-.hero::before { left: -15px; top: 38px; }
-.hero::after { right: -8px; bottom: 65px; transform: rotate(160deg); }
-
-.floral-top { position: absolute; right: 2px; top: 70px; color: rgba(217,105,109,.65); font-size: 30px; transform: rotate(17deg); }
+.floral-top { display: none; }
+.botanical-frame {
+  position: absolute;
+  z-index: 0;
+  top: 14.2%;
+  right: 16.8%;
+  bottom: 5.9%;
+  left: 16.8%;
+  border: 1px solid rgba(188, 125, 126, .58);
+  border-radius: 34px 34px 48px 48px;
+  background: rgba(255, 254, 254, .98);
+  box-shadow: 0 1px 3px rgba(112, 70, 70, .05);
+}
 .eyebrow { margin: 0; color: var(--rose); text-transform: uppercase; letter-spacing: .08em; font-size: 31px; transform: rotate(-8deg); }
 .tiny-crown { margin-top: -49px; margin-left: 22px; color: rgba(191,160,92,.38); font-size: 86px; }
-.hero h1 { z-index: 1; margin: 9px 0 16px; color: var(--rose); font: 400 clamp(74px, 20vw, 102px)/.9 "Parisienne", cursive; }
+.hero > :not(.botanical-frame, .floral) { position: relative; z-index: 1; }
+.hero h1 { margin: 9px 0 16px; color: var(--rose); font: 400 clamp(74px, 20vw, 102px)/.9 "Parisienne", cursive; }
 .lead { margin: 0; color: var(--gold); font-size: 29px; line-height: .9; }
 .date-row { margin-top: 32px; display: flex; align-items: center; gap: 11px; color: var(--rose-dark); text-transform: uppercase; font-weight: 600; letter-spacing: .04em; }
 .date-row strong { display: grid; place-items: center; width: 53px; height: 53px; border: 1px solid var(--gold); border-radius: 50%; font-size: 29px; color: var(--rose); }
@@ -119,7 +128,6 @@ footer strong { color: var(--rose); font: 400 86px/1 "Parisienne", cursive; }
 .reveal { opacity: 1; transform: none; }
 
 @media (max-width: 380px) {
-  .hero { min-height: 690px; padding-inline: 20px; }
   .eyebrow { font-size: 25px; }
   .story { grid-template-columns: 120px 1fr; padding-left: 71px; }
   .photo-stack figure { width: 120px; height: 165px; }
