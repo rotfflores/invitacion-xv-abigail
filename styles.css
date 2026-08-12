@@ -54,10 +54,10 @@ body {
 .botanical-frame {
   position: absolute;
   z-index: 0;
-  top: 7.5%;
-  right: 4.5%;
+  top: 11%;
+  right: 6%;
   bottom: 4.5%;
-  left: 4.5%;
+  left: 6%;
   border: 1px solid rgba(188, 125, 126, .42);
   border-radius: 34px;
   background: rgba(255, 254, 254, .98);
