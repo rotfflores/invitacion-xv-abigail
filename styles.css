@@ -63,7 +63,9 @@ body {
   border: 1px solid rgba(188, 125, 126, .42);
   border-radius: 34px;
   background: rgba(255, 254, 254, .98);
-  box-shadow: 0 2px 5px rgba(112, 70, 70, .04);
+  box-shadow:
+    0 14px 30px rgba(104, 62, 66, .18),
+    0 4px 10px rgba(104, 62, 66, .10);
 }
 .botanical-frame::after {
   content: "";
