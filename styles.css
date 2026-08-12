@@ -85,20 +85,20 @@ body {
 .hero-floral-back {
   z-index: 0;
   top: 1.5%;
-  left: -2%;
-  width: 66%;
+  left: 0;
+  width: 61%;
 }
 .hero-floral-front {
   z-index: 3;
   top: 5.5%;
-  left: -3%;
-  width: 36%;
+  left: 0;
+  width: 33%;
 }
 .hero-floral-top-right {
   z-index: 3;
-  top: -1%;
-  right: -1%;
-  width: 52%;
+  top: 0;
+  right: 1.5%;
+  width: 48%;
 }
 .hero-floral-back-bottom-left {
   z-index: 0;
@@ -255,7 +255,7 @@ body {
   }
 }
 
-.story { min-height: 800px; padding: 72px 27px 78px 82px; display: grid; grid-template-columns: 145px 1fr; align-items: center; gap: 16px; }
+.story { min-height: 800px; padding: 72px 27px 78px 82px; display: grid; grid-template-columns: 145px 1fr; align-items: center; gap: 16px; background: #f9e9e9; }
 .story::before { content: "♛"; position: absolute; top: 27px; left: 210px; color: rgba(217,105,109,.55); font-size: 84px; transform: rotate(-10deg); }
 .story::after { right: -5px; bottom: 58px; font-size: 36px; }
 .vertical-title { position: absolute; left: -24px; top: 347px; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .05em; font-size: 28px; font-weight: 600; transform: rotate(-90deg); }
@@ -268,7 +268,7 @@ body {
 .story blockquote { z-index: 2; margin: 80px 0 0 -6px; padding: 25px 17px; border: 1px solid var(--rose-dark); border-radius: 15px; color: var(--rose-dark); background: rgba(255,250,246,.88); box-shadow: inset 0 0 0 5px var(--paper), 0 7px 16px rgba(85,43,43,.1); text-align: center; font-size: 18px; line-height: 1.25; }
 .story blockquote span { display: block; margin-top: 24px; }
 
-.countdown-section { padding: 25px 24px 90px; text-align: center; }
+.countdown-section { padding: 25px 24px 90px; text-align: center; background: #f9e9e9; }
 .countdown-section h2, .details > h2 { margin: 0 0 30px; color: var(--rose); font: 400 74px/1 "Parisienne", cursive; }
 .countdown { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; align-items: start; padding: 17px 10px 13px; border: 1px solid var(--rose-dark); border-radius: 5px; color: var(--gold); }
 .countdown div { display: flex; flex-direction: column; }
