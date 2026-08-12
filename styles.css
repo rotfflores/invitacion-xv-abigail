@@ -300,17 +300,17 @@ body {
   border: 1px solid rgba(209, 145, 148, .18);
   box-shadow: 0 18px 30px rgba(104, 62, 66, .16);
 }
-.story { min-height: 760px; padding: 56px 18px 52px 66px; display: grid; grid-template-columns: 135px 1fr; align-items: center; gap: 12px; background: transparent; }
+.story { min-height: 760px; padding: 42px 12px 48px 58px; display: grid; grid-template-columns: 135px minmax(0, 1fr); align-items: start; gap: 10px; background: transparent; }
 .story::before { content: "♛"; position: absolute; top: 27px; left: 210px; color: rgba(217,105,109,.55); font-size: 84px; transform: rotate(-10deg); }
 .story::after { right: -5px; bottom: 58px; font-size: 36px; }
-.vertical-title { position: absolute; left: -24px; top: 347px; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .05em; font-size: 28px; font-weight: 600; transform: rotate(-90deg); }
-.photo-stack { z-index: 1; display: flex; flex-direction: column; transform: rotate(-2deg); filter: drop-shadow(0 6px 4px rgba(80,50,50,.18)); }
-.photo-stack figure { width: 145px; height: 184px; padding: 7px; margin: -2px 0; background: white; }
+.vertical-title { position: absolute; left: 12px; top: 184px; margin: 0; color: var(--rose-dark); text-transform: uppercase; letter-spacing: .05em; font-size: 27px; font-weight: 600; line-height: 1; writing-mode: vertical-rl; transform: rotate(180deg); }
+.photo-stack { z-index: 1; display: flex; flex-direction: column; transform: rotate(-2deg); transform-origin: top center; filter: drop-shadow(0 6px 4px rgba(80,50,50,.18)); }
+.photo-stack figure { width: 135px; height: 180px; padding: 7px; margin: -2px 0; background: white; }
 .photo-stack figure:nth-child(2) { transform: rotate(2.5deg); }
 .photo-stack figure:nth-child(3) { transform: rotate(-1deg); }
 .photo-stack img { width: 100%; height: 100%; object-fit: cover; }
 .photo-stack figure:nth-child(2) img { object-position: 50% 32%; }
-.story blockquote { z-index: 2; margin: 80px 0 0 -6px; padding: 25px 17px; border: 1px solid var(--rose-dark); border-radius: 15px; color: var(--rose-dark); background: rgba(255,250,246,.88); box-shadow: inset 0 0 0 5px var(--paper), 0 7px 16px rgba(85,43,43,.1); text-align: center; font-size: 18px; line-height: 1.25; }
+.story blockquote { z-index: 2; margin: 150px 0 0 -4px; padding: 22px 12px; border: 1px solid var(--rose-dark); border-radius: 15px; color: var(--rose-dark); background: rgba(255,250,246,.88); box-shadow: inset 0 0 0 5px var(--paper), 0 7px 16px rgba(85,43,43,.1); text-align: center; font-size: 17px; line-height: 1.25; }
 .story blockquote span { display: block; margin-top: 24px; }
 
 .countdown-section { padding: 20px 28px 24px; text-align: center; background: transparent; }
@@ -354,7 +354,8 @@ footer strong { color: var(--rose); font: 400 86px/1 "Parisienne", cursive; }
 
 @media (max-width: 380px) {
   .quince-arc text { font-size: 18px; }
-  .story { grid-template-columns: 120px 1fr; padding-left: 71px; }
+  .story { grid-template-columns: 120px minmax(0, 1fr); padding-left: 52px; }
+  .vertical-title { left: 9px; top: 174px; font-size: 24px; }
   .photo-stack figure { width: 120px; height: 165px; }
   .story blockquote { font-size: 16px; padding-inline: 11px; }
   .countdown strong { font-size: 25px; }
