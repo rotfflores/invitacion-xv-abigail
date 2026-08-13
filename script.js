@@ -17,7 +17,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-const revealItems = document.querySelectorAll('.reveal');
+const revealItems = document.querySelectorAll('.reveal, .details > h2, .card');
 
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const revealObserver = new IntersectionObserver((entries) => {
@@ -28,7 +28,7 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
         entry.target.classList.remove('is-visible');
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
   revealItems.forEach((item) => {
     item.classList.add('scroll-ready');

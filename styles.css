@@ -386,9 +386,11 @@ footer { min-height: 330px; padding: 28px 20px 24px; display: flex; flex-directi
 .copyright { position: relative; z-index: 2; margin: 12px 0 0; color: rgba(53, 39, 41, .7); font-size: clamp(10px, 2.8vw, 13px); letter-spacing: .08em; }
 
 .reveal { opacity: 1; transform: translateY(0); }
-.reveal.scroll-ready:not(.is-visible) { transform: translateY(24px) scale(.992); }
-.reveal.scroll-ready { transition: transform .8s cubic-bezier(.22, .72, .28, 1); transform-origin: center top; will-change: transform; }
-.reveal.scroll-ready.is-visible { transform: translateY(0); }
+.scroll-ready:not(.is-visible) { transform: translateY(42px) scale(.975); }
+.scroll-ready { transition: transform .9s cubic-bezier(.16, .78, .24, 1); transform-origin: center top; will-change: transform; }
+.scroll-ready.is-visible { transform: translateY(0) scale(1); }
+.card.scroll-ready:not(.is-visible) { transform: translateY(58px) scale(.96); }
+.card.scroll-ready { transition-duration: 1s; }
 
 @media (max-width: 380px) {
   .quince-arc text { font-size: 18px; }
@@ -414,5 +416,5 @@ footer { min-height: 330px; padding: 28px 20px 24px; display: flex; flex-directi
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal.scroll-ready, .reveal.scroll-ready:not(.is-visible) { opacity: 1; transform: none; transition: none; }
+  .reveal, .scroll-ready, .scroll-ready:not(.is-visible), .card.scroll-ready:not(.is-visible) { opacity: 1; transform: none; transition: none; }
 }
