@@ -16,3 +16,21 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+const revealItems = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+
+  revealItems.forEach((item) => {
+    item.classList.add('scroll-ready');
+    revealObserver.observe(item);
+  });
+}
