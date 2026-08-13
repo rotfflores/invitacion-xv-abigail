@@ -298,9 +298,7 @@ body {
   overflow: hidden;
   background: rgba(255, 246, 246, .42);
   border: 1px solid rgba(209, 145, 148, .18);
-  box-shadow:
-    0 18px 38px -30px rgba(104, 62, 66, .10),
-    0 34px 64px -52px rgba(104, 62, 66, .06);
+  box-shadow: 0 18px 30px rgba(104, 62, 66, .16);
 }
 .story { min-height: 620px; padding: clamp(30px, 8vw, 42px) 6px 22px clamp(42px, 10vw, 51px); display: grid; grid-template-columns: clamp(112px, 31vw, 135px) minmax(0, 1fr); align-items: start; gap: 0; background: transparent; }
 .story::before, .story::after { content: none; }
@@ -329,7 +327,7 @@ body {
 .countdown span { margin-top: 7px; text-transform: uppercase; font-size: 10px; }
 .countdown i { font-style: normal; font-size: 26px; line-height: .8; }
 
-.details { margin-top: -38px; padding: 38px 28px 75px; text-align: center; background: var(--page-pink); }
+.details { margin-top: -38px; padding: 38px 28px 75px; text-align: center; background: transparent; }
 .details::before { content: none; }
 .details > h2 { color: #988459; font-size: 68px; }
 .card { position: relative; margin: 0 auto 38px; padding: 45px 30px 38px; border: 1px solid rgba(164,79,85,.38); border-radius: 20px; background: #fdf7f6; box-shadow: 0 10px 24px rgba(110,67,67,.08); overflow: hidden; }
