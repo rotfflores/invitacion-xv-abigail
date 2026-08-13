@@ -386,8 +386,8 @@ footer { min-height: 330px; padding: 28px 20px 24px; display: flex; flex-directi
 .copyright { position: relative; z-index: 2; margin: 12px 0 0; color: rgba(53, 39, 41, .7); font-size: clamp(10px, 2.8vw, 13px); letter-spacing: .08em; }
 
 .reveal { opacity: 1; transform: translateY(0); }
-.reveal.scroll-ready:not(.is-visible) { transform: translateY(14px); }
-.reveal.scroll-ready { transition: transform .65s cubic-bezier(.22, .72, .28, 1); will-change: transform; }
+.reveal.scroll-ready:not(.is-visible) { transform: translateY(24px) scale(.992); }
+.reveal.scroll-ready { transition: transform .8s cubic-bezier(.22, .72, .28, 1); transform-origin: center top; will-change: transform; }
 .reveal.scroll-ready.is-visible { transform: translateY(0); }
 
 @media (max-width: 380px) {

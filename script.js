@@ -24,7 +24,8 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove('is-visible');
       }
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
