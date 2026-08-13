@@ -336,7 +336,7 @@ body {
 .card > * { position: relative; z-index: 2; }
 .detail-decor, .detail-bow, .reception-glasses, .dress-figures, .rsvp-envelope { display: block; height: auto; pointer-events: none; user-select: none; }
 .detail-decor { position: absolute; z-index: 4; }
-.detail-bow { position: absolute; z-index: 5; top: 0; left: 50%; width: clamp(42px, 13%, 58px); transform: translate(-50%, -52%); }
+.detail-bow { position: absolute; z-index: 5; top: 5px; left: 50%; width: clamp(48px, 15%, 66px); transform: translateX(-50%); }
 .reception { padding-top: 52px; padding-bottom: 54px; }
 .reception-top { top: 0; right: 0; width: 46%; transform: translate(18%, -34%); }
 .reception-glasses { width: clamp(78px, 29%, 116px); margin: 2px auto 4px; }
@@ -363,7 +363,7 @@ body {
 .rsvp p { max-width: 270px; margin: 12px auto; }
 
 @media (max-width: 380px) {
-  .detail-bow { width: 38px; }
+  .detail-bow { width: 48px; }
   .reception, .rsvp { padding-inline: 22px; }
   .dress-code { padding-inline: 20px; }
   .rsvp-row { grid-template-columns: 34% minmax(0, 1fr); gap: 7px; }
