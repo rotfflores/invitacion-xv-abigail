@@ -379,12 +379,11 @@ body {
   .rsvp-bottom { transform: translate(18%, 36%); }
 }
 
-footer { min-height: 260px; display: grid; place-content: center; text-align: center; }
-footer::before, footer::after { content: "❀ 𓆸 ❧"; position: absolute; color: rgba(217,105,109,.45); font-size: 35px; }
-footer::before { top: 40px; left: 13px; transform: rotate(-20deg); }
-footer::after { bottom: 35px; right: 13px; transform: rotate(155deg); }
-footer p { margin: 0; color: var(--gold); text-transform: uppercase; letter-spacing: .22em; }
-footer strong { color: var(--rose); font: 400 86px/1 "Parisienne", cursive; }
+footer { min-height: 330px; padding: 28px 20px 24px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; overflow: hidden; background: var(--page-pink); }
+.footer-monogram { position: relative; width: min(88%, 410px); height: 230px; display: grid; place-items: center; }
+.footer-monogram span { position: absolute; z-index: 0; inset: 50% auto auto 50%; color: rgba(217, 105, 109, .19); font: 400 clamp(150px, 47vw, 225px)/.75 "Italiana", serif; letter-spacing: -.14em; transform: translate(-53%, -50%); }
+.footer-monogram strong { position: relative; z-index: 1; margin-top: 18px; color: var(--rose); font: 400 clamp(76px, 22vw, 110px)/1 "Parisienne", cursive; }
+.copyright { position: relative; z-index: 2; margin: 12px 0 0; color: rgba(53, 39, 41, .7); font-size: clamp(10px, 2.8vw, 13px); letter-spacing: .08em; }
 
 .reveal { opacity: 1; transform: none; }
 
