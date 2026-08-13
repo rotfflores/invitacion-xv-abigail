@@ -298,7 +298,9 @@ body {
   overflow: hidden;
   background: rgba(255, 246, 246, .42);
   border: 1px solid rgba(209, 145, 148, .18);
-  box-shadow: 0 18px 30px rgba(104, 62, 66, .16);
+  box-shadow:
+    0 22px 28px -20px rgba(104, 62, 66, .18),
+    0 42px 52px -38px rgba(104, 62, 66, .10);
 }
 .story { min-height: 620px; padding: clamp(30px, 8vw, 42px) 6px 22px clamp(42px, 10vw, 51px); display: grid; grid-template-columns: clamp(112px, 31vw, 135px) minmax(0, 1fr); align-items: start; gap: 0; background: transparent; }
 .story::before, .story::after { content: none; }
